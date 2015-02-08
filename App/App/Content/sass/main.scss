@@ -1,0 +1,199 @@
+/*
+============================================================================
+Name: Test App for Visit.com Adriatic
+Description: Main css
+Version: 1.0
+============================================================================
+*/
+
+/* reset style */
+@import "compass/reset";
+
+
+/* image path */
+$imgPath: "../images/";
+
+/* color variables used throughout the application */
+$backgroundColor: #e9f1f4;
+
+$white : #fff;
+$black : #000;
+$lightBlack: #212121;
+
+$red: #cf2a28;
+$green: #009d0e;
+$orange: #f58220;
+
+$yellow: #ffff00;
+$mediumYellow: #fe9900;
+$darkYellow: #fe9900;
+
+$blue: #085394;
+$lightBlue: #e6edf7;
+$mediumBlue: #94bbf2;
+
+$gray: #dddddd;
+$lightGray: #d2d2d2;
+$mediumGrey: #cccccc;
+$darkestGrey: #333333;
+
+$errorRed: #ed5261; 
+
+/* default font-sizes */
+$defaultFontSize: 13px;
+$errorFontSize: 10px;
+$tooltipFontSize: 10px;
+$inputFontSize: 12px;
+
+$h1FontSize: 32px;
+$h2FontSize: 20px;
+$h3FontSize: 18px;
+$h4FontSize: 16px;
+$h5FontSize: 14px;
+$h6FontSize: 12px;
+
+/* default font-families */
+$defaultFontFamily: 'Calibri';
+$boldFontFamily: 'Calibri';
+
+/* import compass rounded corners */
+@import "compass/css3/appearance";
+@import "compass/css3/border-radius";
+$default-border-radius: 0px;
+
+@import "compass/css3";
+@import "compass/css3/box-shadow";
+@import "compass/css3/text-shadow";
+@import "compass/css3/opacity";
+@import "compass/css3/transition";
+@import "compass/css3/images";
+@import "compass/css3/transform";
+@import "compass/utilities";
+
+/* reusable button mixins without icon */
+@mixin btnDefault ($bg-color, $shade-color-top) { border: 0px; background: $bg-color; @include box-shadow(rgba(0, 0, 0, 1.0) 0px 3px 0px, $shade-color-top 0px 0px 0px 0px inset); }
+@mixin btn-default { @include btnDefault(#eae5c7, #eae5c7); }
+
+@mixin btnOrange ($bg-color, $shade-color-top) { border: 0px; background: $bg-color; @include box-shadow(rgba(254, 123, 6, 1.0) 0px 3px 0px, $shade-color-top 0px 0px 0px 0px inset); }
+@mixin btn-orange { @include btnOrange(#fe9900, #fe9900); }
+
+@mixin btnRed($bg-color, $shade-color-top) { border: 0px; background: $bg-color; @include box-shadow(rgba(237, 82, 97, 1.0) 0px 3px 0px, $shade-color-top 0px 0px 0px 0px inset); }
+@mixin btn-red { @include btnRed(#f26d7d, #f26d7d); }
+
+@mixin btnGreen ($bg-color, $shade-color-top) { border: 0px; background: $bg-color; @include box-shadow(rgba(122, 204, 200, 1.0) 0px 3px 0px, $shade-color-top 0px 0px 0px 0px inset); }
+@mixin btn-green { @include btnGreen(#36aea8, #36aea8); }
+
+@mixin btnBlue ($bg-color, $shade-color-top) { border: 0px; background: $bg-color; @include box-shadow(rgba(8, 83, 148, 1.0) 0px 3px 0px, $shade-color-top 0px 0px 0px 0px inset); }
+@mixin btn-blue { @include btnBlue(#94bbf2, #94bbf2); }
+
+@mixin btn-hover { margin: -2px -2px 0px 0px !important; @include transition(all 0.2s ease-out false); }
+@mixin errorHover { @include opacity(1.0); margin-left: 20px; @include transition(all 0.2s ease-out false); }
+
+/*
+============================================================================
+Default (blue) scrollbar for pages
+============================================================================
+*/
+/*::-webkit-scrollbar { width: 9px; height: 10px; margin-left:2px; background-clip: padding-box; }
+::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment { height: 7px; width:10px; }
+::-webkit-scrollbar-track-piece { background-color: $white; }
+::-webkit-scrollbar-thumb:vertical { height: 50px; background-color: $black; @include border-radius(2px); width:7px; border-top: 2px solid $white; border-bottom: 2px solid $white; border-right: 1px solid $white; border-left: 1px solid $white; }
+::-webkit-scrollbar-thumb:horizontal { height: 50px; background-color: $black; @include border-radius(2px); width:7px; border-top: 2px solid $white; border-bottom: 2px solid $white; border-right: 1px solid $white; border-left: 1px solid $white; }*/
+
+/*
+============================================================================
+Global (body, heading itd itd)
+============================================================================
+*/
+* { outline: none !important; }
+
+body { font: $defaultFontSize $defaultFontFamily !important; font-weight: normal !important; line-height: 1.2 !important; margin: 5px auto; width: 960px; }
+body { background: $backgroundColor url("#{$imgPath}back-bg.png")!important; color: $black !important; }
+
+/* Headings */
+h1 { font-size: $h1FontSize; }
+h2 { font-size: $h2FontSize; }
+h3 { font-size: $h3FontSize; }
+h4 { font-size: $h4FontSize; }
+h5 { font-size: $h5FontSize; }
+h6 { font-size: $h6FontSize; }
+
+h1, h2, h3, h4, h5, h6 {}
+
+img { max-width: 100%; cursor: pointer; }
+
+a {
+	&:link, &:visited, &:hover, &:active, &:focus, &:target { text-decoration:none; outline: none; }
+}
+
+.clr { clear: both; padding: 5px 0; }
+.hr { border-bottom: 1px solid $black; width: 95%; clear: both; margin: 20px auto; }
+
+.f-left { float: left; }
+.f-right { float: right; }
+
+/*
+============================================================================
+Header
+============================================================================
+*/
+.content-wrapper { margin: 0 auto; max-width: 960px; }
+
+header { background: $white; border: 1px solid $lightGray; padding: 5px; font-size: 18px;
+	.content-wrapper { height: 20px; line-height: 20px;
+		.f-left { float: left; }
+		.f-right { float: right;
+			.user { background: transparent url("#{$imgPath}icon-user.gif") center left no-repeat; padding-left: 20px; }
+		}
+		span { text-transform: uppercase; }
+	}
+}
+
+/*
+============================================================================
+Footer
+============================================================================
+*/
+footer { background: $white; clear: both; border: 1px solid $lightGray; padding: 5px;
+	.content-wrapper { height: 20px; line-height: 20px; text-align: center; }
+}
+
+/*
+============================================================================
+Body
+============================================================================
+*/
+#body { background-color: $white; clear: both; padding: 5px; border-left: 1px solid $lightGray; border-right: 1px solid $lightGray; overflow: auto; border-bottom: 1px solid $lightGray; }
+
+
+
+.btn-submit { position: relative; top: 0; width: auto; height: 30px; line-height: 28px; @include btn-orange; color: $white; @include text-shadow(rgba(0, 0, 0, 0.4) 1px 2px 1px); font-size: 18px; font-family: $defaultFontFamily; margin: 10px; padding: 0 20px; cursor: pointer; text-transform: uppercase; @include transition(all 0.2s ease false);
+	&:hover { @include background-image(linear-gradient(#fe7104, #fe7104)); }
+	&:active { /*@include box-shadow(inset 0px 0px rgba(254, 84, 2, 1.0));*/ top: 4px; }
+}
+
+/*
+============================================================================
+Blink text
+============================================================================
+*/
+@-moz-keyframes blink-text {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blink-text {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blink-text {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+.blink { -webkit-animation-name: blink-text; -webkit-animation-duration: 1s; -webkit-animation-timing-function: linear; -webkit-animation-iteration-count: infinite; -moz-animation-name: blink-text; -moz-animation-duration: 1s; -moz-animation-timing-function: linear; -moz-animation-iteration-count: infinite; animation-name: blink-text; animation-duration: 1s; animation-timing-function: linear; animation-iteration-count: infinite; }
+
