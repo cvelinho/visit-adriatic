@@ -1,0 +1,5 @@
+E:\+visit.com\visit-adriatic\App\App\bin\App.dll
+E:\+visit.com\visit-adriatic\App\App\bin\App.pdb
+E:\+visit.com\visit-adriatic\App\App\obj\Debug\App.csprojResolveAssemblyReference.cache
+E:\+visit.com\visit-adriatic\App\App\obj\Debug\App.dll
+E:\+visit.com\visit-adriatic\App\App\obj\Debug\App.pdb

@@ -1,0 +1,119 @@
+/*
+============================================================================
+Media queries
+============================================================================
+*/
+
+	@media screen and (min-width: 860px) {
+		.header, .nav-container { height: 58px; }
+		.header { 
+			.nav-container {
+				figure {
+					.logo { margin: 10px 0 0 12px !important; }
+				}
+				nav { }
+			}
+		}
+
+		a.menu-link { display: none; }
+		.js nav[role=navigation] { max-height: none; }
+		nav { display: inline-block; }
+		nav[role=navigation] { position: absolute; bottom: 0px; left: 230px;
+			ul { margin: 0; border: 0;
+				li { @include border-top-right-radius(5px !important); @include border-top-left-radius(5px !important); display: inline-block; margin: 0px;
+					&:first-child { margin-left: 5px; }
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 860px) {
+		.main-wrapper {
+			aside { width: 50px; background-color: $white; border-right: 1px solid $sidebar-border; height: calc(100% - 120px); position: absolute;
+				&.sidebar {
+					h2 { font-size: $h2FontSize; font-weight: bold; color: $black; margin: 21px 10px 0 44px; line-height: 35px; border-bottom: 2px solid $sidebar-border-bottom; transform: rotate(90deg); transform-origin: left top 0; width: 70px; }
+				}
+			}
+			.body { flex: 1; margin-left: 50px;
+				.wrapper { padding: 10px; margin: 10px;
+					.wrapper-content { display: block; position: fixed; width: calc(100% - 90px); height: auto; height: calc(100% - 180px); }
+				}
+			}
+		}
+	}
+
+	/*@media screen and (min-width: 780px) {
+		a.menu-link { display: none; }
+		.js nav[role=navigation] { max-height: none; }
+		nav[role=navigation] {
+			ul { margin: 0; border: 0;
+				li { @include border-top-right-radius(0px); @include border-top-left-radius(0px); display: inline-block; margin: 0px;
+					&:first-child { margin-left: 0px; }
+					&.active { 
+						a { }
+					}
+					a { border: 0; }		
+				}
+			}
+		} 		
+	}*/
+
+	@media (max-width: 760px) {
+		.main-wrapper {
+
+			aside { width: 406px; background-color: $white; border-right: 1px solid $sidebar-border; height: calc(100% - 120px); position: absolute;
+				&.sidebar {
+					h2 { font-size: $h2FontSize; font-weight: bold; color: $black; margin: 30px 23px 0 23px; line-height: 35px; border-bottom: 2px solid $sidebar-border-bottom; transform: rotate(0deg);}
+				}
+			}
+			
+
+			.body { flex: 1; margin-left: 0px;
+				.wrapper { padding: 10px; margin: 10px;
+					.wrapper-content { display: block; position: inherit; width: auto; height: auto;
+				
+						.inner { position: relative; height: 200px; min-height: 50%; display: block;
+					
+							/* Booking control */
+							.inner-left, .inner-right { display: block; box-sizing: border-box; width: 100%;
+								.inner-content { width: inherit; height: auto; position: absolute; background: $white; border: 1px solid $inner-content-border; }
+							}
+							.inner-left { font-size: 16px; float: left; margin: 0 1% 0px 0; }
+							.inner-right { font-size: 16px; float: right; margin: 0 0 0px 1%;
+								div {
+									.left { float: left; width: 33.33333%; margin: 0px; text-align: center; color: $white; height: 145px; }
+								}
+							}
+					
+							/* Table Sales Report */
+							.inner-main { 
+								.inner-content { height: auto; 
+									section { 
+										.table-sales-report {
+											thead { 
+												th {
+													&:first-child { padding: 0px; text-align: right; }
+													&:last-child { padding-right: 0px; }
+												}
+											}
+											tr { height: auto; }			
+											tbody {
+												td { 
+													&:first-child { padding: 0px; text-align: right; }
+													&:last-child { padding-right: 0px; }
+												}
+											}
+										}
+									}					
+								}
+							}		
+						}		
+					}
+				}
+			}
+
+
+
+
+		}
+	}

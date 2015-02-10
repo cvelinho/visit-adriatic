@@ -1,0 +1,5 @@
+@import "compass/css3/font-face";
+
+@include font-face("opensans-regular", font-files("opensans-regular.woff", woff, "opensans-regular.ttf", truetype), "opensans-regular.eot", "opensans-regular.svg#opensans-regular", svg);
+
+@include font-face("opensans-bold", font-files("opensans-bold.woff", woff, "opensans-bold.ttf", truetype), "opensans-bold.eot", "opensans-bold.svg#opensans-bold", svg);

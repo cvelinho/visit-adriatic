@@ -1,0 +1,25 @@
+/*
+============================================================================
+Table Sales Report
+============================================================================
+*/
+
+	@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+		table, thead, tbody, th, td, tr { display: block; }
+		
+		thead tr { position: absolute; top: -9999px; left: -9999px; }
+		
+		tr { border-top: 1px solid #f2f2f2; border-bottom: 1px solid #f2f2f2; margin: 2px 0; }
+		
+		td { border: none; border-bottom: 1px solid none; position: relative; padding-left: 50%; }
+		
+		td:before { position: absolute; top: 0px; left: 0px; width: 45%;  padding-right: 10px; white-space: nowrap; }
+		
+		td:nth-of-type(1):before { content: "Top 5 sales staff (SEK)"; background-color: #4991c7; color: #fff; }
+		td:nth-of-type(2):before { content: "Today"; background-color: #4991c7; color: #fff; }
+		td:nth-of-type(3):before { content: "This week"; background-color: #4991c7; color: #fff; }
+		td:nth-of-type(4):before { content: "This month"; background-color: #4991c7; color: #fff; }
+		td:nth-of-type(5):before { content: "This week"; background-color: #4991c7; color: #fff; }
+		td:nth-of-type(6):before { content: "This month"; background-color: #4991c7; color: #fff; }
+	}
+	
