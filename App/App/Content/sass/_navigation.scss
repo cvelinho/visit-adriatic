@@ -4,26 +4,20 @@ Header, navigation
 ============================================================================
 */
 
-.header { background-color: $header-bg-color; position: relative;
-	.nav-container {
-		figure { display: inline-block;
-			.logo { margin: 6px 0 0 3px; }
-		}
-		nav { }
-	}
-}
+    a.menu-link { float: right; display: block; padding: 9px 13px; font-size: 32px; font-weight: bold; color: $white;
+        .text-bars { color: $white; }
+    }
+    .menu-nav nav[role=navigation] { overflow: hidden; max-height: 0; }
+    nav[role=navigation] { clear: both; @include transition(all 0.3s ease-out false);
+        &.active { max-height: 250px; }
 
-	a.menu-link { float: right; display: block; padding: 4px 13px; font-size: 32px; font-weight: bold; color: $white; }
-	.js nav[role=navigation] { overflow: hidden; max-height: 0; }
-	nav[role=navigation] { clear: both; @include transition(all 0.3s ease-out false);
-		&.active { max-height: 250px; }
-	}
-	nav[role=navigation] ul { margin: 0; padding: 0; 
-		li { background-color: $header-nav-bg-color; margin: 0px;
-			&:first-child { }
-			&.active { background-color: $header-nav-bg-active-color; 
-				a { color: $header-nav-active-color; }
-			}
-			a { color: $header-nav-color; display: block; padding: 14px 26px; }		
-		}
-	}
+        ul { margin: 0; padding: 0; 
+            li { background-color: $header-nav-bg-color; margin: 0px;
+                &:first-child { }
+                &.active { background-color: $header-nav-bg-active-color; 
+                    a { color: $header-nav-active-color; }
+                }
+                a { color: $header-nav-color; display: block; padding: 14px 26px; }		
+            }
+        }
+    }

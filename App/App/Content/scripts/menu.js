@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $('body').addClass('js');
+    $('body').addClass('menu-nav');
     var $menu = $('#menu'),
       $menulink = $('.menu-link');
 
