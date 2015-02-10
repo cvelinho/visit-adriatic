@@ -59,9 +59,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\main.css" />
-    <Content Include="stylesheets\ie.css" />
-    <Content Include="stylesheets\print.css" />
-    <Content Include="stylesheets\screen.css" />
+    <Content Include="Content\fonts\opensans-bold.svg" />
+    <Content Include="Content\fonts\opensans-italic.svg" />
+    <Content Include="Content\fonts\opensans-regular.svg" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\sass\main.css">
+      <DependentUpon>main.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\scripts\menu.js" />
+    <Content Include="index.html" />
+    <Content Include="packages.config" />
+    <Content Include="Content\fonts\opensans-bold.eot" />
+    <Content Include="Content\fonts\opensans-bold.ttf" />
+    <Content Include="Content\fonts\opensans-bold.woff" />
+    <Content Include="Content\fonts\opensans-italic.eot" />
+    <Content Include="Content\fonts\opensans-italic.ttf" />
+    <Content Include="Content\fonts\opensans-italic.woff" />
+    <Content Include="Content\fonts\opensans-regular.eot" />
+    <Content Include="Content\fonts\opensans-regular.ttf" />
+    <Content Include="Content\fonts\opensans-regular.woff" />
+    <Content Include="Content\sass\_fonts.scss" />
+    <Content Include="Content\sass\_media.scss" />
+    <None Include="Content\scripts\jquery-2.1.3.intellisense.js" />
+    <Content Include="Content\scripts\jquery-2.1.3.js" />
+    <Content Include="Content\scripts\jquery-2.1.3.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -69,28 +90,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="config.rb" />
-    <Content Include="sass\ie.scss">
-      <Compile>True</Compile>
-      <Minify>True</Minify>
-      <OutputFolder>E:\+visit.com\visit-adriatic\App\App\stylesheets</OutputFolder>
-      <CompileStyle>Nested</CompileStyle>
-      <DebugInfo>False</DebugInfo>
-    </Content>
-    <Content Include="sass\print.scss">
-      <Compile>True</Compile>
-      <Minify>True</Minify>
-      <OutputFolder>E:\+visit.com\visit-adriatic\App\App\stylesheets</OutputFolder>
-      <CompileStyle>Nested</CompileStyle>
-      <DebugInfo>False</DebugInfo>
-    </Content>
-    <Content Include="sass\screen.scss">
-      <Compile>True</Compile>
-      <Minify>True</Minify>
-      <OutputFolder>E:\+visit.com\visit-adriatic\App\App\stylesheets</OutputFolder>
-      <CompileStyle>Nested</CompileStyle>
-      <DebugInfo>False</DebugInfo>
-    </Content>
     <Content Include="Content\sass\main.scss" />
+    <Content Include="Content\sass\_navigation.scss">
+      <Compile>True</Compile>
+      <Minify>True</Minify>
+      <CompileStyle>Nested</CompileStyle>
+      <DebugInfo>False</DebugInfo>
+    </Content>
+    <Content Include="Content\scripts\jquery-2.1.3.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -98,11 +105,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\fonts\" />
-    <Folder Include="Content\images\" />
-    <Folder Include="Content\scripts\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

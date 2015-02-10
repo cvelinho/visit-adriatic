@@ -1,0 +1,106 @@
+/*
+============================================================================
+Media queries
+============================================================================
+*/
+
+	@media screen and (min-width: 920px) {
+		.header, .nav-container { height: 58px; }
+		.header { 
+			.nav-container {
+				figure {
+					.logo { margin: 10px 0 0 12px !important; }
+				}
+				nav { }
+			}
+		}
+		nav { display: inline-block; }
+		nav[role=navigation] { position: absolute; bottom: 0px; left: 230px;
+			ul {
+				li { @include border-top-right-radius(5px !important); @include border-top-left-radius(5px !important); 
+					&:first-child { margin-left: 5px; }
+					&.active { 
+						a { }
+					}
+					a { }		
+				}
+			}
+		} 
+	}
+
+	@media screen and (min-width: 780px) {
+		a.menu-link { display: none; }
+		.js nav[role=navigation] { max-height: none; }
+		nav[role=navigation] {
+			ul { margin: 0; border: 0;
+				li { @include border-top-right-radius(0px); @include border-top-left-radius(0px); display: inline-block; margin: 0px;
+					&:first-child { margin-left: 0px; }
+					&.active { 
+						a { }
+					}
+					a { border: 0; }		
+				}
+			}
+		} 		
+	}
+
+	@media (max-width: 480px) {
+		.main-wrapper {
+			aside { border: 1px solid $sidebar-border; position: inherit; margin: 10px; display: none;
+				&.sidebar {
+					h2 { margin: 1px 23px 0 42px; border-bottom: none; }
+				}
+			}
+
+
+
+
+			.body { flex: 1; margin-left: 0px;
+				.wrapper { padding: 10px; margin: 10px;
+					.wrapper-content { display: block; position: inherit; width: auto; height: auto;
+				
+						.inner { position: relative; height: 200px; min-height: 50%; display: block;
+					
+							/* Booking control */
+							.inner-left, .inner-right { display: block; box-sizing: border-box; width: 100%;
+								.inner-content { width: inherit; height: auto; position: absolute; background: $white; border: 1px solid $inner-content-border; }
+							}
+							.inner-left { font-size: 16px; float: left; margin: 0 1% 0px 0; }
+							.inner-right { font-size: 16px; float: right; margin: 0 0 0px 1%;
+								div {
+									.left { float: left; width: 33.33333%; margin: 0px; text-align: center; color: $white; height: 145px; }
+								}
+							}
+					
+							/* Table Sales Report */
+							.inner-main { 
+								.inner-content { height: auto; 
+									section { 
+										.table-sales-report {
+											thead { 
+												th {
+													&:first-child { padding: 0px; text-align: right; }
+													&:last-child { padding-right: 0px; }
+												}
+											}
+											tr { height: auto; }			
+											tbody {
+												td { 
+													&:first-child { padding: 0px; text-align: right; }
+													&:last-child { padding-right: 0px; }
+												}
+											}
+										}
+									}					
+								}
+							}		
+						}		
+					}
+				}
+			}
+
+
+
+
+		}
+	}
