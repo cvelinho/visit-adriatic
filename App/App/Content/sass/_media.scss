@@ -4,7 +4,7 @@ Media queries
 ============================================================================
 */
 
-	@media screen and (min-width: 920px) {
+	@media screen and (min-width: 860px) {
 		.header, .nav-container { height: 58px; }
 		.header { 
 			.nav-container {
@@ -14,21 +14,35 @@ Media queries
 				nav { }
 			}
 		}
+
+		a.menu-link { display: none; }
+		.js nav[role=navigation] { max-height: none; }
 		nav { display: inline-block; }
 		nav[role=navigation] { position: absolute; bottom: 0px; left: 230px;
-			ul {
-				li { @include border-top-right-radius(5px !important); @include border-top-left-radius(5px !important); 
+			ul { margin: 0; border: 0;
+				li { @include border-top-right-radius(5px !important); @include border-top-left-radius(5px !important); display: inline-block; margin: 0px;
 					&:first-child { margin-left: 5px; }
-					&.active { 
-						a { }
-					}
-					a { }		
 				}
 			}
-		} 
+		}
 	}
 
-	@media screen and (min-width: 780px) {
+	@media screen and (max-width: 860px) {
+		.main-wrapper {
+			aside { width: 50px; background-color: $white; border-right: 1px solid $sidebar-border; height: calc(100% - 120px); position: absolute;
+				&.sidebar {
+					h2 { font-size: $h2FontSize; font-weight: bold; color: $black; margin: 21px 10px 0 44px; line-height: 35px; border-bottom: 2px solid $sidebar-border-bottom; transform: rotate(90deg); transform-origin: left top 0; width: 70px; }
+				}
+			}
+			.body { flex: 1; margin-left: 50px;
+				.wrapper { padding: 10px; margin: 10px;
+					.wrapper-content { display: block; position: fixed; width: calc(100% - 90px); height: auto; height: calc(100% - 180px); }
+				}
+			}
+		}
+	}
+
+	/*@media screen and (min-width: 780px) {
 		a.menu-link { display: none; }
 		.js nav[role=navigation] { max-height: none; }
 		nav[role=navigation] {
@@ -42,18 +56,17 @@ Media queries
 				}
 			}
 		} 		
-	}
+	}*/
 
-	@media (max-width: 480px) {
+	@media (max-width: 760px) {
 		.main-wrapper {
-			aside { border: 1px solid $sidebar-border; position: inherit; margin: 10px; display: none;
+
+			aside { width: 406px; background-color: $white; border-right: 1px solid $sidebar-border; height: calc(100% - 120px); position: absolute;
 				&.sidebar {
-					h2 { margin: 1px 23px 0 42px; border-bottom: none; }
+					h2 { font-size: $h2FontSize; font-weight: bold; color: $black; margin: 30px 23px 0 23px; line-height: 35px; border-bottom: 2px solid $sidebar-border-bottom; transform: rotate(0deg);}
 				}
 			}
-
-
-
+			
 
 			.body { flex: 1; margin-left: 0px;
 				.wrapper { padding: 10px; margin: 10px;

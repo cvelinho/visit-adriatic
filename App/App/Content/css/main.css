@@ -463,7 +463,7 @@ nav[role=navigation] ul li a {
 Media queries
 ============================================================================
 */
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 860px) {
   /* line 8, ../sass/_media.scss */
   .header, .nav-container {
     height: 58px;
@@ -474,18 +474,33 @@ Media queries
     margin: 10px 0 0 12px !important;
   }
 
-  /* line 17, ../sass/_media.scss */
+  /* line 18, ../sass/_media.scss */
+  a.menu-link {
+    display: none;
+  }
+
+  /* line 19, ../sass/_media.scss */
+  .js nav[role=navigation] {
+    max-height: none;
+  }
+
+  /* line 20, ../sass/_media.scss */
   nav {
     display: inline-block;
   }
 
-  /* line 18, ../sass/_media.scss */
+  /* line 21, ../sass/_media.scss */
   nav[role=navigation] {
     position: absolute;
     bottom: 0px;
     left: 230px;
   }
-  /* line 20, ../sass/_media.scss */
+  /* line 22, ../sass/_media.scss */
+  nav[role=navigation] ul {
+    margin: 0;
+    border: 0;
+  }
+  /* line 23, ../sass/_media.scss */
   nav[role=navigation] ul li {
     -moz-border-radius-topright: 5px !important;
     -webkit-border-top-right-radius: 5px !important;
@@ -493,79 +508,106 @@ Media queries
     -moz-border-radius-topleft: 5px !important;
     -webkit-border-top-left-radius: 5px !important;
     border-top-left-radius: 5px !important;
+    display: inline-block;
+    margin: 0px;
   }
-  /* line 21, ../sass/_media.scss */
+  /* line 24, ../sass/_media.scss */
   nav[role=navigation] ul li:first-child {
     margin-left: 5px;
   }
 }
-@media screen and (min-width: 780px) {
+@media screen and (max-width: 860px) {
   /* line 32, ../sass/_media.scss */
-  a.menu-link {
-    display: none;
+  .main-wrapper aside {
+    width: 50px;
+    background-color: white;
+    border-right: 1px solid #d2d2d2;
+    height: calc(100% - 120px);
+    position: absolute;
   }
-
-  /* line 33, ../sass/_media.scss */
-  .js nav[role=navigation] {
-    max-height: none;
-  }
-
-  /* line 35, ../sass/_media.scss */
-  nav[role=navigation] ul {
-    margin: 0;
-    border: 0;
-  }
-  /* line 36, ../sass/_media.scss */
-  nav[role=navigation] ul li {
-    -moz-border-radius-topright: 0px;
-    -webkit-border-top-right-radius: 0px;
-    border-top-right-radius: 0px;
-    -moz-border-radius-topleft: 0px;
-    -webkit-border-top-left-radius: 0px;
-    border-top-left-radius: 0px;
-    display: inline-block;
-    margin: 0px;
+  /* line 34, ../sass/_media.scss */
+  .main-wrapper aside.sidebar h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin: 21px 10px 0 44px;
+    line-height: 35px;
+    border-bottom: 2px solid #4991c7;
+    transform: rotate(90deg);
+    transform-origin: left top 0;
+    width: 70px;
   }
   /* line 37, ../sass/_media.scss */
-  nav[role=navigation] ul li:first-child {
-    margin-left: 0px;
-  }
-  /* line 41, ../sass/_media.scss */
-  nav[role=navigation] ul li a {
-    border: 0;
-  }
-}
-@media (max-width: 480px) {
-  /* line 49, ../sass/_media.scss */
-  .main-wrapper aside {
-    border: 1px solid #d2d2d2;
-    position: inherit;
-    margin: 10px;
-    display: none;
-  }
-  /* line 51, ../sass/_media.scss */
-  .main-wrapper aside.sidebar h2 {
-    margin: 1px 23px 0 42px;
-    border-bottom: none;
-  }
-  /* line 58, ../sass/_media.scss */
   .main-wrapper .body {
     flex: 1;
-    margin-left: 0px;
+    margin-left: 50px;
   }
-  /* line 59, ../sass/_media.scss */
+  /* line 38, ../sass/_media.scss */
   .main-wrapper .body .wrapper {
     padding: 10px;
     margin: 10px;
   }
-  /* line 60, ../sass/_media.scss */
+  /* line 39, ../sass/_media.scss */
+  .main-wrapper .body .wrapper .wrapper-content {
+    display: block;
+    position: fixed;
+    width: calc(100% - 90px);
+    height: auto;
+    height: calc(100% - 180px);
+  }
+}
+/*@media screen and (min-width: 780px) {
+	a.menu-link { display: none; }
+	.js nav[role=navigation] { max-height: none; }
+	nav[role=navigation] {
+		ul { margin: 0; border: 0;
+			li { @include border-top-right-radius(0px); @include border-top-left-radius(0px); display: inline-block; margin: 0px;
+				&:first-child { margin-left: 0px; }
+				&.active { 
+					a { }
+				}
+				a { border: 0; }		
+			}
+		}
+	} 		
+}*/
+@media (max-width: 760px) {
+  /* line 64, ../sass/_media.scss */
+  .main-wrapper aside {
+    width: 406px;
+    background-color: white;
+    border-right: 1px solid #d2d2d2;
+    height: calc(100% - 120px);
+    position: absolute;
+  }
+  /* line 66, ../sass/_media.scss */
+  .main-wrapper aside.sidebar h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin: 30px 23px 0 23px;
+    line-height: 35px;
+    border-bottom: 2px solid #4991c7;
+    transform: rotate(0deg);
+  }
+  /* line 71, ../sass/_media.scss */
+  .main-wrapper .body {
+    flex: 1;
+    margin-left: 0px;
+  }
+  /* line 72, ../sass/_media.scss */
+  .main-wrapper .body .wrapper {
+    padding: 10px;
+    margin: 10px;
+  }
+  /* line 73, ../sass/_media.scss */
   .main-wrapper .body .wrapper .wrapper-content {
     display: block;
     position: inherit;
     width: auto;
     height: auto;
   }
-  /* line 62, ../sass/_media.scss */
+  /* line 75, ../sass/_media.scss */
   .main-wrapper .body .wrapper .wrapper-content .inner {
     position: relative;
     height: 200px;
@@ -574,13 +616,13 @@ Media queries
     /* Booking control */
     /* Table Sales Report */
   }
-  /* line 65, ../sass/_media.scss */
+  /* line 78, ../sass/_media.scss */
   .main-wrapper .body .wrapper .wrapper-content .inner .inner-left, .main-wrapper .body .wrapper .wrapper-content .inner .inner-right {
     display: block;
     box-sizing: border-box;
     width: 100%;
   }
-  /* line 66, ../sass/_media.scss */
+  /* line 79, ../sass/_media.scss */
   .main-wrapper .body .wrapper .wrapper-content .inner .inner-left .inner-content, .main-wrapper .body .wrapper .wrapper-content .inner .inner-right .inner-content {
     width: inherit;
     height: auto;
@@ -588,19 +630,19 @@ Media queries
     background: white;
     border: 1px solid #d2d2d2;
   }
-  /* line 68, ../sass/_media.scss */
+  /* line 81, ../sass/_media.scss */
   .main-wrapper .body .wrapper .wrapper-content .inner .inner-left {
     font-size: 16px;
     float: left;
     margin: 0 1% 0px 0;
   }
-  /* line 69, ../sass/_media.scss */
+  /* line 82, ../sass/_media.scss */
   .main-wrapper .body .wrapper .wrapper-content .inner .inner-right {
     font-size: 16px;
     float: right;
     margin: 0 0 0px 1%;
   }
-  /* line 71, ../sass/_media.scss */
+  /* line 84, ../sass/_media.scss */
   .main-wrapper .body .wrapper .wrapper-content .inner .inner-right div .left {
     float: left;
     width: 33.33333%;
@@ -609,29 +651,29 @@ Media queries
     color: white;
     height: 145px;
   }
-  /* line 77, ../sass/_media.scss */
+  /* line 90, ../sass/_media.scss */
   .main-wrapper .body .wrapper .wrapper-content .inner .inner-main .inner-content {
     height: auto;
   }
-  /* line 82, ../sass/_media.scss */
+  /* line 95, ../sass/_media.scss */
   .main-wrapper .body .wrapper .wrapper-content .inner .inner-main .inner-content section .table-sales-report thead th:first-child {
     padding: 0px;
     text-align: right;
   }
-  /* line 83, ../sass/_media.scss */
+  /* line 96, ../sass/_media.scss */
   .main-wrapper .body .wrapper .wrapper-content .inner .inner-main .inner-content section .table-sales-report thead th:last-child {
     padding-right: 0px;
   }
-  /* line 86, ../sass/_media.scss */
+  /* line 99, ../sass/_media.scss */
   .main-wrapper .body .wrapper .wrapper-content .inner .inner-main .inner-content section .table-sales-report tr {
     height: auto;
   }
-  /* line 89, ../sass/_media.scss */
+  /* line 102, ../sass/_media.scss */
   .main-wrapper .body .wrapper .wrapper-content .inner .inner-main .inner-content section .table-sales-report tbody td:first-child {
     padding: 0px;
     text-align: right;
   }
-  /* line 90, ../sass/_media.scss */
+  /* line 103, ../sass/_media.scss */
   .main-wrapper .body .wrapper .wrapper-content .inner .inner-main .inner-content section .table-sales-report tbody td:last-child {
     padding-right: 0px;
   }
